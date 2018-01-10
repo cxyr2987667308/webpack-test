@@ -1,3 +1,0 @@
-function world (){
-    alert(str);
-}
