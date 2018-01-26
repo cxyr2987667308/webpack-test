@@ -4,18 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <script type="text/javascript">
-        // .substr(htmlWebpackPlugin.files.publicPath.length) 不带 publicPath
-        <%= compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
-    </script>
 </head>
 <body> 
-    <!-- 我是一行注释 -->
-    <% for(var k in htmlWebpackPlugin.files.chunks) { %>
-        <% if (k !== 'main') { %>
-            <script type="text/javascript" src="<%=
-            htmlWebpackPlugin.files.chunks[k].entry %>"></script>
-        <% } %>
-    <% } %>
+    
 </body>
 </html>
